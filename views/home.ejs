@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+        <title>Home Page</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+    FullName : <%= JSON.stringify(user.fullName) %><br>
+    Email : <%= JSON.stringify(user.email) %><br>
+    PassWord : <%= JSON.stringify(user.password) %><br>
+    profileImageUrl : <%= JSON.stringify(user.profileImageUrl)%><br>
+    profileImageUrl : <img src=`${<%= JSON.(user.profileImageUrl) %>}` alt="hello">
+    <%- include('./partials/scripts') %>
+</body>
+
+</html>
