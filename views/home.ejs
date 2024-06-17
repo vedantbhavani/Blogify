@@ -9,10 +9,10 @@
 <body>
     <%- include('./partials/nav') %>
         <% if (locals.user) { %>
-            <div class="container mt-4 ">
+            <div class="container mt-4 d-flex">
                 <% blogs.forEach(blog=> { %>
-                    <div class="card" style="width: 18rem;">
-                        <img src="<%= blog.coverImageUrl %>" class="card-img-top" alt="...">
+                    <div class="card" style="width: max-content;">
+                        <img src="<%= blog.coverImageUrl %>" width="200px" height="200px" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">
                                 <%= blog.title %>

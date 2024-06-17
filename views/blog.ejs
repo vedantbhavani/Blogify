@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+        <title>Home Page</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+
+    <p><%= blog.title %></p>
+    
+    <img src="<%= blog.coverImageUrl %>" width="300px" height="400px" alt="">
+
+    <p><%= blog.body %></p>
+
+    <%- include('./partials/scripts') %>
+</body>
+
+</html>
