@@ -8,12 +8,22 @@
 
 <body>
     <%- include('./partials/nav') %>
-    FullName : <%= JSON.stringify(user.fullName) %><br>
-    Email : <%= JSON.stringify(user.email) %><br>
-    PassWord : <%= JSON.stringify(user.password) %><br>
-    profileImageUrl : <%= JSON.stringify(user.profileImageUrl)%><br>
-    profileImageUrl : <img src=`${<%= JSON.(user.profileImageUrl) %>}` alt="hello">
-    <%- include('./partials/scripts') %>
+        <% if (locals.user) { %>
+            <div class="container mt-4 ">
+                <% blogs.forEach(blog=> { %>
+                    <div class="card" style="width: 18rem;">
+                        <img src="<%= blog.coverImageUrl %>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                <%= blog.title %>
+                            </h5>
+                            <a href="/blog/<%= blog._id %>" class="mx-auto btn btn-primary">Expoler Card</a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+            <% } %>
+                <%- include('./partials/scripts') %>
 </body>
 
 </html>

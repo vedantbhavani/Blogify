@@ -11,13 +11,13 @@ const blogSchema = new Schema({
     } , 
     coverImageUrl : {
         type : String ,
+        required : false 
     },
     createdBy : {
         type : Schema.Types.ObjectId,
         ref : 'user'
     }
 })
-
 const blog = model('blog' , blogSchema)
 
 module.exports = blog;

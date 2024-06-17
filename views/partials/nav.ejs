@@ -16,13 +16,12 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <!-- <%= user.fullName %> -->
-                <img src=`${<%= user.profileImageUrl %>}` alt="">
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/user/logout">logout</a></li>
-            </ul>
-          </li>
+              <%= user.fullName %>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/user/logout">logout</a></li>
+              </ul>
+            </li>
           <%} else { %>
             <li class="nav-item">
               <a class="nav-link" href="/user/signup">Create Account</a>
