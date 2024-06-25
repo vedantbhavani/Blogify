@@ -9,18 +9,22 @@
 <body>
     <%- include('./partials/nav') %>
         <% if (locals.user) { %>
-            <div class="container mt-4 d-flex">
-                <% blogs.forEach(blog=> { %>
-                    <div class="card" style="width: max-content;">
-                        <img src="<%= blog.coverImageUrl %>" width="200px" height="200px" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">
-                                <%= blog.title %>
-                            </h5>
-                            <a href="/blog/<%= blog._id %>" class="mx-auto btn btn-primary">Expoler Card</a>
+            <div class="container mt-4">
+                <div class="row row-cols-3">
+                    <% blogs.forEach(blog=> { %>
+                        <div class="cols mt-2">
+                            <div class="card cols" style="width: max-content;">
+                                <img src="<%= blog.coverImageUrl %>" width="400px" height="200px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">
+                                        <%= blog.title %>
+                                    </h5>
+                                    <a href="/blog/<%= blog._id %>" class="mx-auto d-block w-50 btn btn-primary">Expoler Card</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                <% }) %>
+                        <% }) %>
+                </div>
             </div>
             <% } %>
                 <%- include('./partials/scripts') %>

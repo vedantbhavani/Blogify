@@ -9,11 +9,11 @@
 <body>
     <%- include('./partials/nav') %>
 
-    <p><%= blog.title %></p>
+    <h2 style="text-align: center;"><%= blog.title %></h2>
     
-    <img src="<%= blog.coverImageUrl %>" width="300px" height="400px" alt="">
+    <img src="<%= blog.coverImageUrl %>" style="display: block; margin: auto;" width="700px" height="400px" alt="">
 
-    <p><%= blog.body %></p>
+    <p style="margin-left: 4vw;"><%= blog.body %></p>
 
     <%- include('./partials/scripts') %>
 </body>
